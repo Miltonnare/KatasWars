@@ -8,16 +8,19 @@ def circle(radius):
     
     diameter = 2 * radius + 1
     result = []
+
+    if radius <= 2:
+        diameter = 2 * radius - 1  
+        for i in range(diameter):
+            result.append('#' * diameter) 
+        return '\n'.join(result) + '\n'
     
     for y in range(diameter):
         row = []
         for x in range(diameter):
-           
             dx = x - radius
             dy = y - radius
             distance = math.sqrt(dx**2 + dy**2)
-            
-          
             if distance <= radius:
                 row.append('#')
             else:
@@ -27,17 +30,13 @@ def circle(radius):
     return '\n'.join(result) + '\n'
 
 
-
-# Test for various radii
-test_radii = [17, 18, 19, 20]
+test_radii = [3, 15, 11, 30, 26, 28]
 
 for r in test_radii:
-    print(f"\nRadius {r}:")
+    print(f"Radius: {r}")
     output = circle(r)
-
     lines = output.split('\n')
     for i in range(min(5, len(lines))):
         print(repr(lines[i]))
     print("...")
-   
     print(f"Dimensions: {len(lines[0])}x{len(lines)-1}")
