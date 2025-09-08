@@ -1,8 +1,8 @@
-Circle Generation Algorithm Summary
+###Circle Generation Algorithm Summary###
 
 This Python function creates ASCII art circles by determining which positions in a text grid fall within a specified radius using mathematical calculations. The algorithm generates a square grid of size (2×radius + 1) where each cell represents either the interior ('#') or exterior (' ') of a circle.
 
-Core Mathematics:
+##Core Mathematics:##
 
 Uses the Euclidean distance formula: √(dx² + dy²)
 
