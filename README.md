@@ -10,7 +10,7 @@ Applies the circle equation: (x-center_x)² + (y-center_y)² ≤ radius²
 
 Centers the circle at (radius, radius) for perfect symmetry
 
-Key Features:
+**Key Features:**
 
 Creates filled circles (disks) rather than outlines
 
