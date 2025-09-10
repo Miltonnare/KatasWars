@@ -6,17 +6,20 @@ def circle(radius):
     if radius == 0: 
         return "\n"
     
-    diameter = 2 * radius - 1 
+   
+    diameter = 2 * radius + 1  
     result = []
-
     
     for y in range(diameter):
         row = []
         for x in range(diameter):
-            dx = x - (radius - 1)  
-            dy = y - (radius - 1)
+           
+            dx = x - radius  
+            dy = y - radius  
             distance = math.sqrt(dx**2 + dy**2)
-            if distance <= radius - 0.2:  
+            
+            
+            if distance <= radius - 0.5:  
                 row.append('#')
             else:
                 row.append(' ')
